@@ -16,12 +16,8 @@ namespace JudoPayDotNetIntegrationTests
         [OneTimeSetUp]
         public void Init()
         {
-            _judo = JudoPaymentsFactory.Create(Configuration.Token,
-                Configuration.Secret,
-                Configuration.Baseaddress);
+            _judo = JudoPaymentsFactory.Create(Configuration.Token, Configuration.Secret, Configuration.Baseaddress);
         }
-
-       
 
         [Test]
         public void GetTransaction()
@@ -171,7 +167,6 @@ namespace JudoPayDotNetIntegrationTests
             {
                 Amount = 25,
                 ReceiptId = response.Response.ReceiptId,
-                
             };
 
             response = _judo.Collections.Create(collection).Result;
@@ -224,7 +219,6 @@ namespace JudoPayDotNetIntegrationTests
             {
                 Amount = 25,
                 ReceiptId = paymentResponse.Response.ReceiptId,
-                
             };
 
             var response = _judo.Refunds.Create(refund).Result;

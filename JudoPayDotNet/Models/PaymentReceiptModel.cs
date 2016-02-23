@@ -210,6 +210,15 @@ namespace JudoPayDotNet.Models
         /// </value>
         [DataMember(EmitDefaultValue = false)]
         public ThreeDSecureReceiptModel ThreeDSecure { get; set; }
+
+        /// <summary>
+        /// The
+        /// </summary>
+        /// <value>
+        /// The unique identifier of the device
+        /// </value>
+        [DataMember(EmitDefaultValue = false)]
+        public string DeviceIdentifier { get; set; }
     }
     // ReSharper restore UnusedMember.Global
     // ReSharper restore UnusedAutoPropertyAccessor.Global

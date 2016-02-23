@@ -27,9 +27,14 @@ namespace JudoPayDotNet
 		/// </summary>
         IWebPayments WebPayments { get; set; }
 
-		/// <summary>
-		/// Provides visibility into transaction activity per consumer
-		/// </summary>
+        /// <summary>
+        /// Provides visibility into blacklisting consumers and devices
+        /// </summary>
+        IBlacklists Blacklists { get; set; }
+        
+        /// <summary>
+        /// Provides visibility into transaction activity per consumer
+        /// </summary>
         IConsumers Consumers { get; set; }
 
 		/// <summary>

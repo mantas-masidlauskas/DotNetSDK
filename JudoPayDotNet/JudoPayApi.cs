@@ -23,7 +23,7 @@ namespace JudoPayDotNet
         internal IMarket Market { get; set; }
 
         public IWebPayments WebPayments { get; set; }
-
+        public IBlacklists Blacklists { get; set; }
         public IConsumers Consumers { get; set; }
 
         public IPayments Payments { get; set; }
@@ -60,6 +60,10 @@ namespace JudoPayDotNet
             };
 
             Consumers = new Consumers(logger(typeof(Consumers)), client);
+            Blacklists = new Blacklists
+            {
+                Devices = new Devices(logger(typeof (Blacklists)), client)
+            };
         }
 
     }

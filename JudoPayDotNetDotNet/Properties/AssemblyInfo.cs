@@ -38,4 +38,8 @@ using System.Runtime.InteropServices;
 	InternalsVisibleTo("JudoPayDotNetTests"),
 	InternalsVisibleTo("JudoPayDotNetIntegrationTests"),
 	InternalsVisibleTo("JudoPayDotNetWindowsPhone"),
-	InternalsVisibleTo("WindowsPhoneDotNetSDK")]
+	InternalsVisibleTo("WindowsPhoneDotNetSDK"),
+    InternalsVisibleTo("Judo.Tests.Base"),
+    InternalsVisibleTo("Judo.Tests.Deployment"),
+    InternalsVisibleTo("Judo.Tests.Regression"),
+    InternalsVisibleTo("Judo.Tests.Smoke")]

@@ -171,9 +171,9 @@ namespace JudoPayDotNet.Models
 
         public void ProvisionSDKVersion()
         {
-            if (String.IsNullOrEmpty(UserAgent) || !UserAgent.Contains("DotNetSDK"))
+            if (string.IsNullOrEmpty(UserAgent) || !UserAgent.Contains("DotNetSDK"))
             {
-                if (String.IsNullOrEmpty(UserAgent))
+                if (string.IsNullOrEmpty(UserAgent))
                 {
                     UserAgent = "DotNetSDK-" + JudoPayClient.SDKVersion;
                 }

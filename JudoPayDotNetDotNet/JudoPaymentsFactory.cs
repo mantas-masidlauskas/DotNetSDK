@@ -35,6 +35,7 @@ namespace JudoPayDotNetDotNet
 
         private static JudoPayApi Create(Credentials credentials, string baseUrl, IJudoConfiguration configuration)
         {
+            //TODO allow this to be set for testing
             var apiVersion = GetConfigValue(ApiVersionKey, DEFAULT_API_VERSION, configuration);
 
             var httpClient = new HttpClientWrapper(new AuthorizationHandler(credentials,
@@ -118,6 +119,11 @@ namespace JudoPayDotNetDotNet
             var credentials = new Credentials(oauthAccessToken);
             return Create(credentials, baseUrl, configuration ?? defaultConfigurationAccess);
         }
+
+	    internal static JudoPayApi Create(string version, string token, string secret, string baseUrl, IJudoConfiguration configuration = null)
+	    {
+	        return Create(token, secret, baseUrl, configuration);
+	    }
     }
     // ReSharper restore UnusedMember.Global
 }
