@@ -52,7 +52,6 @@ namespace JudoPayDotNetIntegrationTests
                 YourConsumerReference = yourConsumerReference,
                 Amount = amount,
                 CardToken = cardToken,
-                CV2 = "452",
                 ConsumerToken = "ABSE"
             };
         }
